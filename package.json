@@ -1,0 +1,22 @@
+{
+  "name": "vshospital",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vsvikas08/vs_hospital.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vsvikas08/vs_hospital/issues"
+  },
+  "homepage": "https://github.com/vsvikas08/vs_hospital#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
