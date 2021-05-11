@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book Appointment</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<link rel="stylesheet"  href="stylesheets/css/bootstrap.min.css">
+	<script src="stylesheets/js/bootstrap.min.js"></script>
+	<style>
+		body{
+			background-color: rgb(252, 252, 252);
+			font-family: sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<%- include('header') %>
+	<div class="container">
+		<div class="text-center">
+			<h1 class="display-4">Book Appointment</h1>
+		</div>
+	
+		<div>
+			<form action="" method="POST">
+				<div class="form-row">
+					<div class="col-3"></div>
+					<div class="col-6">
+					<label for="forCitiesSelect">Cities</label>
+					<select class="form-control" id="forCitiesSelect">
+						<option>Bangalore</option>
+						<option>Chennail</option>
+						<option>Delhi</option>
+						<option>Mumbai</option>
+					</select>
+					<div class="col-3"></div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="col-3"></div>
+					<div class="col-6">
+						<label for="forNameInp">Full Name</label>
+						<input class="form-control" type="text" name="name" id="forNameInp" placeholder="Name">
+					</div>
+					<div class="col-3"></div>
+				</div>
+				<div class="form-row">
+					<div class="col-3"></div>
+					<div class="col-6">
+						<label for="forEmailInp">Email</label>
+						<input class="form-control" type="email" name="email" placeholder="name@example.com">
+					</div>
+					<div class="col-3"></div>
+				</div>
+				<div class="form-row">
+					<div class="col-3"></div>
+					<div class="col-6">
+						<label for="forPhoneInp">Moble No.</label>
+						<input class="form-control" type="number" name="phone" placeholder="99XXXXXX01">
+					</div>
+					<div class="col-3"></div>
+				</div>
+				<div class="form-row">
+					<div class="col-3"></div>
+					<div class="col-6">
+						<label for="forSpecialities">Specialities</label>
+						<select class="form-control" id="forSpecialities">
+							<option>Cardiologist</option>
+							<option>Dentist</option>
+							<option>ENT</option>
+							<option>Gastoenterologist</option>
+							<option>Gynecologist</option>
+							<option>Neurosurgeon</option>
+							<option>Orthopaedic Surgeon</option>
+							<option>Psychiatrist</option>
+							<option>Physician</option>
+						</select>
+					</div>
+					<div class="col-3"></div>	
+				</div>
+				<div style="margin-top: 10px;" class="text-center">
+					<button class="btn btn-outline-primary">Submit Request</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

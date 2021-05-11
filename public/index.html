@@ -11,6 +11,9 @@
 		});
 	</script>
 	<style>
+		body{
+			background: #f1f1f1
+		}
 		.jumbotron{
 			background-image: url("img/dr1.jpg");
 			background-size: cover;
@@ -20,6 +23,17 @@
 			height: 350px;
 			opacity: 1.0;
 		}
+		a{
+			font-family: Sans-serif;
+		}
+		div.card{
+			width: 70%;
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+			text-align: center;
+			align-items: center;
+			margin: auto;
+			margin-top: 10px;
+		}
 	</style>
 </head>
 <body>
@@ -27,7 +41,7 @@
 	<div id="includeHeader"></div>
 
 	<!-- From here body -->
-	<div class="jumbotron jumbotron-fluid">
+	<div style="margin-bottom: 0;" class="jumbotron jumbotron-fluid">
 		<div class="container">
 			<p class="text-info" style="color: white; text-align: right;">
 				Covid-19 treatment available<br>
@@ -36,6 +50,72 @@
 			</p>
 		</div>
 	</div>
+
+	<!-- Covid India Details -->
+	<div class="container-fluid">
+		<div style="background-color: #e3f2fd" class="row">
+			<a class="col-3" href="/bookappointment">Book Appointment</a>
+			<a class="col-3" href="">Consult Online</a>
+			<a class="col-3" href="">Book Health Check</a>
+			<div class="col-3">
+				<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+				<a class="col-3" href="">View Health Record</a>
+			</div>
+			
+		</div>
+
+		<!-- Corona Details -->
+		<div class="card">
+			<h3 class="text-warning">Covid-19</h3>
+			<button class="btn btn-lg btn-outline-info">Total Cases<br>100</button>
+			<div class="row">
+			<div class="">
+				<h4 class="text-info">Total Cases</h4>
+				<p>Some text</p>
+			</div>
+			<div class="outline">
+				<h4 class="text-primary">Active Cases</h4>
+				<p>Some text</p>
+			</div>
+			<div class="">
+				<h4 class="text-success">Recover</h4>
+				<p>Some text</p>
+			</div>
+			<div class="">
+				<h4 class="text-danger">Death</h4>
+				<p>Some text</p>
+			</div>
+			</div>
+		</div>
+
+		<button class="btn btn-lg btn-primary">Check Covid-19 Online</button>
+
+		<!-- Description about facilities -->
+		<div class="row">
+			<div class="col-6">
+				<div style="margin-bottom: 10px;" class="card">
+					<h5 class="card-header">Best Doctor</h5>	s
+					We have best doctor in industry			
+				</div>
+			</div>
+			<div class="col-6">
+				<div style="margin-bottom: 10px;" class="card">
+					<h5 class="card-header">Best Equipment</h5>				
+				</div>
+			</div>
+			<div class="col-6">
+				<div style="margin-bottom: 10px;" class="card">
+					<h5 class="card-header">Emergency Service</h5>					
+				</div>
+			</div>
+			<div class="col-6">
+				<div style="margin-bottom: 10px;" class="card">
+					<h5 class="card-header">Best Laboratory</h5>		
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 
 	<!-- Including footer file -->
