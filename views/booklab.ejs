@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../stylesheets/css/bootstrap.min.css">
+	<script src="../stylesheets/js/bootstrap.min.js"></script>
+	<style>
+		body{
+			background-color: rgb(252, 252, 252);
+			font-family: sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<%- include('header') %>
+
+	<div class="m-5 p-5 bg-light">
+		<h1 class="text-center">Lab Test</h1>
+		<form action="" method="POST">
+			<div class="form-row">
+				<div class="col-md-4 md-3 p-3">
+					<label>Name</label>
+					<input class="form-control" type="text" name="name" placeholder="Full Name">
+				</div>
+				<div class="col-md-4 md-3 p-3">
+					<label>Mobile No.</label>
+					<input class="form-control" type="number" name="phone" placeholder="Mobile No.">
+				</div>
+				<div class="col-md-4 md-3 p-3">
+					<label>Email</label>
+					<input class="form-control" type="email" name="email" placeholder="Email">
+				</div>
+				<div class="col-md-4 md-3 p-3">
+					<label>Patient Registeration No.</label>
+					<input class="form-control" type="text" name="drslip" placeholder="Registration No.">
+				</div>
+			</div>
+			<div class="text-center">
+				<button class="btn btn-outline-primary btn-lg">Submit</button>
+			</div>
+		</form>
+	</div>
+
+
+</body>
+</html>

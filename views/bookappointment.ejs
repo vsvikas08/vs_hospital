@@ -19,48 +19,31 @@
 			<h1 class="display-4">Book Appointment</h1>
 		</div>
 	
-		<div>
+		<div class="m-5 p-5 bg-light">
 			<form action="" method="POST">
 				<div class="form-row">
-					<div class="col-3"></div>
-					<div class="col-6">
-					<label for="forCitiesSelect">Cities</label>
-					<select class="form-control" id="forCitiesSelect">
-						<option>Bangalore</option>
-						<option>Chennail</option>
-						<option>Delhi</option>
-						<option>Mumbai</option>
-					</select>
-					<div class="col-3"></div>
+					<div class="col-md-4 md-6 p-3">
+						<label for="forCitiesSelect">Cities</label>
+						<select class="form-control" id="forCitiesSelect">
+							<option>Bangalore</option>
+							<option>Chennail</option>
+							<option>Delhi</option>
+							<option>Mumbai</option>
+						</select>
 					</div>
-				</div>
-				<div class="form-row">
-					<div class="col-3"></div>
-					<div class="col-6">
+					<div class="col-md-4 md-3 p-3">
 						<label for="forNameInp">Full Name</label>
 						<input class="form-control" type="text" name="name" id="forNameInp" placeholder="Name">
 					</div>
-					<div class="col-3"></div>
-				</div>
-				<div class="form-row">
-					<div class="col-3"></div>
-					<div class="col-6">
+					<div class="col-md-4 md-3 p-3">
 						<label for="forEmailInp">Email</label>
 						<input class="form-control" type="email" name="email" placeholder="name@example.com">
 					</div>
-					<div class="col-3"></div>
-				</div>
-				<div class="form-row">
-					<div class="col-3"></div>
-					<div class="col-6">
+					<div class="col-md-4 md-3 p-3">
 						<label for="forPhoneInp">Moble No.</label>
 						<input class="form-control" type="number" name="phone" placeholder="99XXXXXX01">
 					</div>
-					<div class="col-3"></div>
-				</div>
-				<div class="form-row">
-					<div class="col-3"></div>
-					<div class="col-6">
+					<div class="col-md-4 md-3 p-3">
 						<label for="forSpecialities">Specialities</label>
 						<select class="form-control" id="forSpecialities">
 							<option>Cardiologist</option>
@@ -74,7 +57,23 @@
 							<option>Physician</option>
 						</select>
 					</div>
-					<div class="col-3"></div>	
+					<div class="col-md-4 md-3 p-3">
+						<label>Sex: </label><br>
+						<input type="radio" name="sex">
+						<label>Male</label>
+						<input type="radio" name="sex">
+						<label>Femal</label>
+						<input type="radio" name="sex">
+						<label>Other</label>
+					</div>
+					<div class="col-md-4 md-3 p-3">
+						<label>Date of Birth</label>
+						<input class="form-control" type="date" name="dob" placeholder="DOB">
+					</div>
+					<div class="col-md-4 md-3 p-3">
+						<label>Address</label><br>
+						<textarea class="form-control" rows="2" name="address"></textarea>
+					</div>
 				</div>
 				<div style="margin-top: 10px;" class="text-center">
 					<button class="btn btn-outline-primary">Submit Request</button>
