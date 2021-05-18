@@ -12,7 +12,8 @@
 	</script>
 	<style>
 		body{
-			background: #f1f1f1
+			background: #f1f1f1;
+			font-family: Sans-serif;
 		}
 		.jumbotron{
 			background-image: url("img/dr1.jpg");
@@ -25,6 +26,20 @@
 		}
 		a{
 			font-family: Sans-serif;
+			background-color: transparent;
+			text-decoration: none;
+		}
+		.link1,.link2{
+			text-anchor: none;
+			color: green;
+		}
+		.link2:visited{
+			text-decoration: none;
+			color: green;
+		}
+		.link1:visited{
+			text-decoration: none;
+			color: green;
 		}
 		div.card{
 			width: 70%;
@@ -39,7 +54,6 @@
 <body>
 	<!-- Including header file -->
 	<div id="includeHeader"></div>
-
 	<!-- From here body -->
 	<div style="margin-bottom: 0;" class="jumbotron jumbotron-fluid">
 		<div class="container">
@@ -54,66 +68,76 @@
 	<!-- Covid India Details -->
 	<div class="container-fluid">
 		<div style="background-color: #e3f2fd" class="row">
-			<a class="col-3" href="/bookappointment">Book Appointment</a>
-			<a class="col-3" href="/bookappointment/online">Consult Online</a>
-			<a class="col-3" href="/bookappointment/lab">Book Health Check</a>
-			<div class="col-3">
-				<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
-				<a class="col-3" href="">View Health Record</a>
-			</div>
+			<a class="link1 col-3 p-2" href="/bookappointment">Book Appointment</a>
+			<a class="link1 col-3 p-2" href="/bookappointment/online">Consult Online</a>
+			<a class="link1 col-3 p-2" href="/bookappointment/lab">Book Health Check</a>
+			<a class="link2 col-3 p-2" href="/records">View Records</a>
 			
 		</div>
 
 		<!-- Corona Details -->
-		<div class="card">
-			<h3 class="text-warning">Covid-19</h3>
-			<button class="btn btn-lg btn-outline-info">Total Cases<br>100</button>
-			<div class="row">
-			<div class="">
-				<h4 class="text-info">Total Cases</h4>
-				<p>Some text</p>
-			</div>
-			<div class="outline">
-				<h4 class="text-primary">Active Cases</h4>
-				<p>Some text</p>
-			</div>
-			<div class="">
-				<h4 class="text-success">Recover</h4>
-				<p>Some text</p>
-			</div>
-			<div class="">
-				<h4 class="text-danger">Death</h4>
-				<p>Some text</p>
-			</div>
-			</div>
+		<div class="row m-3">
+		 	<div class="col-md-3">
+		 		<div class="card bg-info" style="width: 17rem;">
+		 			<h2 class="text-white"><u>Total cases</u></h2>
+		 			<h1 class="text-white">25200,000</h1>
+		 		</div>
+		 	</div>
+		 	<div class="col-md-3">
+		 		<div class="card bg-primary" style="width: 17rem;">
+		 			<h2 class="text-white"><u>Active cases</u></h2>
+		 			<h1 class="text-white">3353765</h1>
+		 		</div>
+		 	</div>
+		 	<div class="col-md-3">
+		 		<div class="card bg-success" style="width: 17rem;">
+		 			<h2 class="text-white"><u>Recover</u></h2>
+		 			<h1 class="text-white">21596512</h1>
+		 		</div>
+		 	</div>
+		 	<div class="col-md-3">
+		 		<div class="card bg-danger" style="width: 17rem;">
+		 			<h2 class="text-white"><u>Deaths</u></h2>
+		 			<h1 class="text-white">278719</h1>
+		 		</div>
+		 	</div>
 		</div>
-
-		<button class="btn btn-lg btn-primary">Check Covid-19 Online</button>
+		<div class="text-center">
+			<button class="btn btn-lg btn-outline-primary">Check Covid-19 Online</button>
+		</div>
 
 		<!-- Description about facilities -->
 		<div class="row">
-			<div class="col-6">
-				<div style="margin-bottom: 10px;" class="card">
-					<h5 class="card-header">Best Doctor</h5>	s
-					We have best doctor in industry			
+			<div class="col-md-6 col-sm-12">
+				<div class="card">
+					<img class="img-fluid p-1" src="img/dr.jpg">
+					<h5 style="margin-bottom: 0px;" class="card-title">Best Doctor</h5>
+					<p class="card-body">VS Hospital is one of the best hospitals in India having top doctors & best surgeons of India giving world class treatment & patient care.</p>
 				</div>
 			</div>
-			<div class="col-6">
-				<div style="margin-bottom: 10px;" class="card">
-					<h5 class="card-header">Best Equipment</h5>				
+			<div class="col-md-6 col-sm-12">
+				<div class="card">
+					<img class="img-fluid p-1" src="img/equip.jpeg">
+					<h5 style="margin-bottom: 0px;" class="card-title">Best Equipment</h5>	
+					<p class="card-body">We have best equipment in industry and some are imported from froeign. As it provides comfort to patients as well as as ease to doctors.</p>
 				</div>
 			</div>
-			<div class="col-6">
-				<div style="margin-bottom: 10px;" class="card">
-					<h5 class="card-header">Emergency Service</h5>					
+			<div class="col-md-6 col-sm-12">
+				<div class="card">
+					<img class="img-fluid p-1" src="img/emergency.jpeg">
+					<h5 style="margin-bottom: 0px;" class="card-title">Emergency Service</h5>
+					<p class="card-body">We are also providing Emergency services such as ambulence, ICU, MRI and much more. Special treatment form accidental cases.</p>
 				</div>
 			</div>
-			<div class="col-6">
-				<div style="margin-bottom: 10px;" class="card">
-					<h5 class="card-header">Best Laboratory</h5>		
+			<div class="col-md-6 col-sm-12">
+				<div class="card">
+					<img class="img-fluid p-1" src="img/lab.jpeg">
+					<h5 style="margin-bottom: 0px;" class="card-title">Best Laboratory</h5>
+					<p class="card-body">Best laboratory in industry. We have all type of scanning devices as well as all type of test kit to taste each and every disease.</p>
 				</div>
 			</div>
 		</div>
+		<br>
 	</div>
 
 
