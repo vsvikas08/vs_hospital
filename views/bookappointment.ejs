@@ -11,6 +11,23 @@
 			font-family: sans-serif;
 		}
 	</style>
+	<script>
+		(function(){
+			'use strict';
+			window.addEventListener('load',function(){
+				var forms = document.getElementByClass('needs-validation');
+				var validation = Array.prototype.filter.call(forms,function(form){
+					form.addEventListener('submit',function(event){
+						if(form.checkValidity() === false){
+							event.preventDefault();
+							event.stopPropagation();
+						}
+						form.classList.add('was-validated')
+					},false);
+				});
+			},false);
+		})();
+	</script>
 </head>
 <body>
 	<%- include('header') %>
@@ -20,11 +37,11 @@
 		</div>
 	
 		<div class="m-5 p-5 bg-light">
-			<form action="" method="POST">
+			<form action="" method="POST" >
 				<div class="form-row">
 					<div class="col-md-4 md-6 p-3">
-						<label for="forCitiesSelect">Cities</label>
-						<select class="form-control" id="forCitiesSelect">
+						<label for="validateCustom1">Cities</label>
+						<select class="form-control" id="validateCustom1" name="selectCities" required>
 							<option>Bangalore</option>
 							<option>Chennail</option>
 							<option>Delhi</option>
@@ -32,20 +49,23 @@
 						</select>
 					</div>
 					<div class="col-md-4 md-3 p-3">
-						<label for="forNameInp">Full Name</label>
-						<input class="form-control" type="text" name="name" id="forNameInp" placeholder="Name">
+						<label for="validateCustom2">Full Name</label>
+						<input class="form-control" type="text" name="name" id="validateCustom2" placeholder="Name" required>
+						<div class="valid-feedback">
+							Looks good!
+						</div>
 					</div>
 					<div class="col-md-4 md-3 p-3">
 						<label for="forEmailInp">Email</label>
-						<input class="form-control" type="email" name="email" placeholder="name@example.com">
+						<input class="form-control" type="email" name="email" placeholder="name@example.com" required>
 					</div>
 					<div class="col-md-4 md-3 p-3">
 						<label for="forPhoneInp">Moble No.</label>
-						<input class="form-control" type="number" name="phone" placeholder="99XXXXXX01">
+						<input class="form-control" type="number" name="phone" placeholder="99XXXXXX01" required>
 					</div>
 					<div class="col-md-4 md-3 p-3">
 						<label for="forSpecialities">Specialities</label>
-						<select class="form-control" id="forSpecialities">
+						<select class="form-control" id="forSpecialities" name="selectSpecialities" required>
 							<option>Cardiologist</option>
 							<option>Dentist</option>
 							<option>ENT</option>
@@ -59,20 +79,20 @@
 					</div>
 					<div class="col-md-4 md-3 p-3">
 						<label>Sex: </label><br>
-						<input type="radio" name="sex">
+						<input type="radio" name="sex" value="Male" required>
 						<label>Male</label>
-						<input type="radio" name="sex">
+						<input type="radio" name="sex" value="Female">
 						<label>Femal</label>
-						<input type="radio" name="sex">
+						<input type="radio" name="sex" value="Other">
 						<label>Other</label>
 					</div>
 					<div class="col-md-4 md-3 p-3">
 						<label>Date of Birth</label>
-						<input class="form-control" type="date" name="dob" placeholder="DOB">
+						<input class="form-control" type="date" name="dob" placeholder="DOB" required>
 					</div>
 					<div class="col-md-4 md-3 p-3">
 						<label>Address</label><br>
-						<textarea class="form-control" rows="2" name="address"></textarea>
+						<textarea class="form-control" rows="2" name="address" required></textarea>
 					</div>
 				</div>
 				<div style="margin-top: 10px;" class="text-center">
