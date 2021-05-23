@@ -21,28 +21,42 @@
 			<div class="form-row">
 				<div class="col-md-4 md-3 p-3">
 					<label>Name</label>
-					<input class="form-control" type="text" name="name" placeholder="Full Name">
+					<input class="form-control" type="text" name="name" placeholder="Full Name" required>
 				</div>
 				<div class="col-md-4 md-3 p-3">
 					<label>Mobile No.</label>
-					<input class="form-control" type="number" name="phone" placeholder="Mobile No.">
+					<input class="form-control" type="number" name="phone" placeholder="Mobile No." required>
 				</div>
 				<div class="col-md-4 md-3 p-3">
 					<label>Email</label>
-					<input class="form-control" type="email" name="email" placeholder="Email">
+					<input class="form-control" type="email" name="email" placeholder="Email" required>
 				</div>
 				<div class="col-md-4 md-3 p-3">
 					<label>Sex: </label><br>
-					<input type="radio" name="sex">
+					<input type="radio" name="sex" value="Male" required>
 					<label>Male</label>
-					<input type="radio" name="sex">
+					<input type="radio" name="sex" value="Female">
 					<label>Femal</label>
-					<input type="radio" name="sex">
+					<input type="radio" name="sex"n value="Other">
 					<label>Other</label>
 				</div>
 				<div class="col-md-4 md-3 p-3">
 					<label>Date of Birth</label>
-					<input class="form-control" type="date" name="dob" placeholder="DOB">
+					<input class="form-control" type="date" name="dob" placeholder="DOB" required>
+				</div>
+				<div class="col-md-4 md-3 p-3">
+						<label for="forSpecialities">Specialities</label>
+						<select class="form-control" id="forSpecialities" name="selectSpecialities" required>
+							<option>Cardiologist</option>
+							<option>Dentist</option>
+							<option>ENT</option>
+							<option>Gastoenterologist</option>
+							<option>Gynecologist</option>
+							<option>Neurosurgeon</option>
+							<option>Orthopaedic Surgeon</option>
+							<option>Psychiatrist</option>
+							<option>Physician</option>
+						</select>
 				</div>
 			</div>
 			<div class="text-center">

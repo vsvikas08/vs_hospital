@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Consult Online</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<link rel="stylesheet"  href="../stylesheets/css/bootstrap.min.css">
+	<script src="stylesheets/js/bootstrap.min.js"></script>
+	<style>
+		body{
+			background-color: rgb(252, 252, 252);
+			font-family: sans-serif;
+		}
+	</style>
+</head>
+<body>
 <%- include('header.ejs') %>
 
 <div class="container-fluid">
@@ -45,8 +60,8 @@
 					<td><%= appointment.address %></td>
 				</tr>
 				<tr>
-					<th>Cities</th>
-					<td><%= appointment.cities %></td>
+					<th>Location</th>
+					<td><%= appointment.location %></td>
 				</tr>
 				<tr>
 					<td class="text-center" colspan="2"><input type="button" value="Print" onclick="window.print(document.getElementById(pp))"></td>

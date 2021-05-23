@@ -1,5 +1,6 @@
 const route = require('express').Router()
 
+
 const {MongoClient} = require('mongodb')
 const MONGO_URL = 'mongodb://localhost:27017'
 const DB_NAME = 'vshospital'
@@ -25,7 +26,7 @@ route.post('/',(req,res)=>{
 	let sec = date.getSeconds()
 	let today = day + "-" + month + "-" + year + "  " + hr + ":" + min + ":" + sec
 	var appointment = {name: name,email: email,phone: phone,sex: sex,
-					   dob: dob,address: address,cities: cities,specialities: specialities,date: today}
+					   dob: dob,address: address,location: cities,specialities: specialities,date: today}
 	// console.log(appointment)
 	async function addAppointment(){
 		// console.log(appointment)
@@ -42,6 +43,35 @@ route.post('/',(req,res)=>{
 
 route.get('/online',(req,res)=>{
 	res.render('consultonline.ejs')
+})
+route.post('/online',(req,res)=>{
+	var name = req.body.name
+	var phone = req.body.phone
+	var email = req.body.email
+	var sex = req.body.sex
+	var dob = req.body.dob
+	var specialities = req.body.selectSpecialities
+	let date = new Date()
+	let day = date.getDate()
+	let month = date.getMonth()+1
+	let year = date.getFullYear()
+	let hr = date.getHours()
+	let min = date.getMinutes()
+	let sec = date.getSeconds()
+	let dd = day + "-" + month + "-" + year + "  " + hr + ":" + min + ":" + sec
+	var consultOnline = {name: name,phone: phone,email: email,sex: sex,dob: dob,specialities: specialities,date: dd,location: 'online'}
+	
+
+	async function addConsultonline(){
+		console.log(consultOnline)
+		const client = await MongoClient.connect(MONGO_URL)
+		const vshospital = client.db(DB_NAME)
+		const consultCollect = vshospital.collection('consultonline')
+		const result = await consultCollect.insertOne(consultOnline)
+		console.log(result)
+		res.render('details.ejs',{appointment: consultOnline})
+	}
+	addConsultonline()
 })
 
 route.get('/lab',(req,res)=>{
