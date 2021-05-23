@@ -77,6 +77,36 @@ route.post('/online',(req,res)=>{
 route.get('/lab',(req,res)=>{
 	res.render('booklab.ejs')
 })
+route.post('/lab',(req,res)=>{
+	var name = req.body.name
+	var phone = req.body.phone
+	var email = req.body.email
+	var test = req.body.selectTest
+	var sex = req.body.sex
+	var dob = req.body.dob
+	var city = req.body.selectCities
+	let date = new Date()
+	let day = date.getDate()
+	let month = date.getMonth()
+	let year = date.getFullYear()
+	let hr = date.getHours()
+	let min = date.getMinutes()
+	let sec = date.getSeconds()
+	var dd = day + "-" + month + "-" + year + "  " + hr + ":" + min + ":" + sec
+	var lab = {name: name,email: email,sex: sex, phone: phone, specialities: test, dob: dob, date: dd, location: city}
+	// console.log(lab)
+
+	// insert in db
+	async function addLab(){
+		const client = await MongoClient.connect(MONGO_URL)
+		const vshospital = client.db(DB_NAME)
+		const labCollect = vshospital.collection('booklab')
+		const result = await labCollect.insertOne(lab)
+		console.log(result)
+		res.render('details.ejs',{appointment: lab})
+	}
+	addLab()
+})
 
 
 

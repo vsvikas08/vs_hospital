@@ -32,8 +32,36 @@
 					<input class="form-control" type="email" name="email" placeholder="Email">
 				</div>
 				<div class="col-md-4 md-3 p-3">
-					<label>Patient Registeration No.</label>
-					<input class="form-control" type="text" name="drslip" placeholder="Registration No.">
+					<label>Test type</label>
+					<select class="form-control" name="selectTest" required="">
+						<option>Blood Test</option>
+						<option>City Scan</option>
+						<option>MRI</option>
+						<option>Ultrasound</option>
+						<option>X-ray</option>
+					</select>
+				</div>
+				<div class="col-md-4 md-3 p-3">
+					<label>Date of Birth</label>
+					<input class="form-control" type="date" name="dob" placeholder="DOB" required>
+				</div>
+				<div class="col-md-4 md-3 p-3">
+					<label>Sex: </label><br>
+					<input type="radio" name="sex" value="Male" required>
+					<label>Male</label>
+					<input type="radio" name="sex" value="Female">
+					<label>Femal</label>
+					<input type="radio" name="sex"n value="Other">
+					<label>Other</label>
+				</div>
+				<div class="col-md-4 md-3 p-3">
+					<label>City</label>
+					<select class="form-control" name="selectCities" required>
+							<option>Bangalore</option>
+							<option>Chennail</option>
+							<option>Delhi</option>
+							<option>Mumbai</option>
+					</select>
 				</div>
 			</div>
 			<div class="text-center">
