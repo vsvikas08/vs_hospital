@@ -1,0 +1,55 @@
+<%- include('header.ejs') %>
+
+<div class="container-fluid">
+	<div>
+		<h2 class="display-4">Appointment</h2>
+		<div class="row m-3">
+			<% appointments.forEach(function(appointment){ %>
+			<div class="card col-md-4 m-3 p-3" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+				<p><b>Name:</b> <%= appointment.name %></p>
+				<p><b>Email:</b> <%= appointment.email %></p>
+				<p><b>Phone:</b> <%= appointment.phone %></p>
+				<p><b>DOB:</b> <%= appointment.dob %></p>
+				<p><b>Location:</b> <%= appointment.location %></p>
+				<p><b>Specialities:</b> <%= appointment.specialities %> </p>
+				<p><b>Date:</b> <%= appointment.date %></p>
+			</div>
+			<% }) %>
+		</div>
+	</div>
+	<div>
+		<h2 class="display-4">Consult Online</h2>
+		<div class="row m-3">
+			<% consultonlines.forEach(function(consultonline){ %>
+			<div class="card col-md-4 m-3 p-3" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+				<p><b>Name:</b> <%= consultonline.name %> </p>
+				<p><b>Email:</b> <%= consultonline.email %> </p>
+				<p><b>Phone:</b> <%= consultonline.phone %> </p>
+				<p><b>DOB:</b> <%= consultonline.dob %> </p>
+				<p><b>Location:</b> <%= consultonline.location %> </p>
+				<p><b>Specilities:</b> <%= consultonline.specialities %> </p>
+				<p><b>Date:</b> <%= consultonline.date %> </p>
+			</div>
+			<% }) %>
+		</div>
+	</div>
+	<div>
+		<h2 class="display-4">Lab Test</h2>
+		<div class="row m-3">
+			<% labs.forEach(function(lab){ %>
+			<div class="card col-md-4 m-3 p-3" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+				<p><b>Name:</b> <%= lab.name %> </p>
+				<p><b>Email:</b> <%= lab.email %> </p>
+				<p><b>Phone:</b> <%= lab.phone %> </p>
+				<p><b>DOB:</b> <%= lab.dob %> </p>
+				<p><b>Location:</b> <%= lab.location %></p>
+				<p><b>Test:</b> <%= lab.specialities %> </p>
+				<p><b>Date:</b> <%= lab.date %> </p>
+			</div>
+			<% }) %>
+		</div>
+	</div>
+</div>
+
+
+<%- include('footer.ejs') %>
